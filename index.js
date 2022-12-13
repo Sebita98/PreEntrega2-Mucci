@@ -85,7 +85,7 @@ while (seleccion != "no") {
     seleccion = prompt("¿Quiere seguir comprando?");
 
     while (seleccion === "no") {
-        alert("Gracias por la compra, hasta pronto")
+        
         carrito.forEach((carritoFinal) => {
             console.log(`producto: ${carritoFinal.producto}, unidades: ${carritoFinal.unidades}, total a pagar por producto ${carritoFinal.unidades * carritoFinal.precio}`)
         })
@@ -94,7 +94,8 @@ while (seleccion != "no") {
 }
 
 const total = carrito.reduce((acc, el) => acc + el.precio * el.unidades, 0);
-console.log(`el total a pagar por su compra es: ${total}`);
+alert(`el total a pagar por su compra es: ${total}`);
+alert("Gracias por la compra, hasta pronto");
 
 
 
